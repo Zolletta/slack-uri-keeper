@@ -1,1 +1,1 @@
-# slack-uri-keeper
+# slack-url-keeper

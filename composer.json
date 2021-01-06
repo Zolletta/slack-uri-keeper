@@ -1,0 +1,45 @@
+{
+    "name": "zolletta/slack-url-keeper",
+    "type": "project",
+    "description": "A first try to building a Slack app",
+    "autoload": {
+        "psr-4": {
+            "Zolletta\\": "src/Zolletta"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^7.4",
+        "ext-apc": "*",
+        "ext-curl": "^7.4",
+        "ext-json": "*",
+        "ext-pdo": "*",
+        "doctrine/doctrine-bundle": "^1.10.0",
+        "doctrine/doctrine-cache-bundle": "^1.3.5",
+        "doctrine/orm": "^2.6.3",
+        "guzzlehttp/guzzle": "^6.3",
+        "guzzlehttp/psr7": "^1.6"
+    },
+    "require-dev": {
+        "kint-php/kint": "^3.3",
+        "phpstan/extension-installer": "^1.0",
+        "phpstan/phpstan": "^0.12.15",
+        "phpstan/phpstan-doctrine": "^0.12.10",
+        "phpstan/phpstan-phpunit": "^0.12.6",
+        "phpstan/phpstan-symfony": "^0.12.4",
+        "phpunit/phpunit": "^7.4.5",
+        "thecodingmachine/phpstan-safe-rule": "^1.0"
+    },
+    "scripts": {
+        "post-install-cmd": [
+        ],
+        "post-update-cmd": [
+        ],
+        "cs-check": "php-cs-fixer fix --dry-run --diff",
+        "cs-fix": "php-cs-fixer fix --diff"
+    }
+}

@@ -21,3 +21,9 @@ composer-update:
 
 composer-dump-autoload:
 	docker-compose run composer dump-autoload
+
+grumphp:
+	./vendor/bin/grumphp run
+
+phpstan:
+	./vendor/bin/phpstan analyze src --level=7

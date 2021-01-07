@@ -21,6 +21,3 @@ composer-update:
 
 composer-dump-autoload:
 	docker-compose run composer dump-autoload
-
-qodana:
-	 docker run -it -v $PWD:/data/project jetbrains/qodana --show-report

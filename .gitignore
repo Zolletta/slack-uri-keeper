@@ -1,22 +1,20 @@
-
 #IDE
 .idea
 
-#DB
-./db/*
-
 # Parameters
-./app/config/parameters.yml
-./app/config/parameters.ini
+/app/config/parameters.yml
+/app/config/parameters.ini
 
 # Managed by Composer
-./app/bootstrap.php.cache
-./var/bootstrap.php.cache
-./bin/*
-.!bin/console
-./vendor/
+/app/bootstrap.php.cache
+/var/bootstrap.php.cache
+/bin/*
+!bin/console
+/vendor/
 
 # PHPUnit
-./app/phpunit.xml
-./phpunit.xml
+/app/phpunit.xml
+/phpunit.xml
 
+# Mixed
+/db/

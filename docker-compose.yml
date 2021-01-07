@@ -16,7 +16,7 @@ services:
 
   php:
     container_name: zolletta-slack-url-keeper-php
-    image: php:fpm
+    image: php:8-fpm
     volumes:
       - .:/var/www/
     depends_on:

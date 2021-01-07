@@ -32,6 +32,7 @@
         "phpstan/phpstan-symfony":  "*",
         "phpunit/phpunit":  "*",
         "phpro/grumphp": "*",
+        "friendsofphp/php-cs-fixer": "*",
         "thecodingmachine/phpstan-safe-rule":  "*"
     }
 }

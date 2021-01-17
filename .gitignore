@@ -1,5 +1,5 @@
 #IDE
-.idea
+/.idea
 
 # Parameters
 /app/config/parameters.yml
@@ -18,3 +18,5 @@
 
 # Mixed
 /db/
+
+/docker-compose.override.yml

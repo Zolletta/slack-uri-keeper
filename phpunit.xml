@@ -1,35 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/7.5/phpunit.xsd"
-         bootstrap="vendor/autoload.php"
-         forceCoversAnnotation="true"
-         beStrictAboutCoversAnnotation="true"
-         beStrictAboutOutputDuringTests="true"
-         beStrictAboutTodoAnnotatedTests="true"
-         verbose="true">
-    <testsuites>
-        <testsuite name="default">
-            <directory suffix="Test.php">tests</directory>
-        </testsuite>
-    </testsuites>
-
-    <php>
-        <ini name="display_errors" value="true"/>
-        <ini name="error_reporting" value="15" />
-        <ini name="xdebug.max_nesting_level" value="500" />
-        <server name="KERNEL_DIR" value="app/" />
-        <server name="KERNEL_CLASS" value="AppKernel" />
-        <server name='HTTP_HOST' value='local.facile.it' />
-        <server name='REQUEST_SCHEME' value='https' />
-        <server name='REMOTE_ADDR' value='127.0.0.1' />
-        <server name='SYMFONY_ENV' value="test" />
-        <env name="GDPR_AWS_APIKEY" value="OVERRIDE_IN_PHPUNIT.dist" />
-
-    </php>
-
-    <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">src</directory>
-        </whitelist>
-    </filter>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd" bootstrap="vendor/autoload.php" forceCoversAnnotation="true" beStrictAboutCoversAnnotation="true" beStrictAboutOutputDuringTests="true" beStrictAboutTodoAnnotatedTests="true" verbose="true">
+  <coverage processUncoveredFiles="true">
+    <include>
+      <directory suffix=".php">src</directory>
+    </include>
+  </coverage>
+  <testsuites>
+    <testsuite name="default">
+      <directory suffix="Test.php">tests</directory>
+    </testsuite>
+  </testsuites>
+  <php>
+    <ini name="display_errors" value="true"/>
+    <ini name="error_reporting" value="15"/>
+    <ini name="xdebug.max_nesting_level" value="500"/>
+    <server name="KERNEL_DIR" value="app/"/>
+    <server name="KERNEL_CLASS" value="AppKernel"/>
+    <server name="HTTP_HOST" value="local.facile.it"/>
+    <server name="REQUEST_SCHEME" value="https"/>
+    <server name="REMOTE_ADDR" value="127.0.0.1"/>
+    <server name="SYMFONY_ENV" value="test"/>
+    <env name="GDPR_AWS_APIKEY" value="OVERRIDE_IN_PHPUNIT.dist"/>
+  </php>
 </phpunit>

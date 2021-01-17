@@ -21,3 +21,5 @@
 
 /.env
 /docker-compose.override.yml
+/.php_cs.cache
+/.phpunit.result.cache

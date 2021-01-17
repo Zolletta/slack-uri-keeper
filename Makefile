@@ -8,10 +8,10 @@ stop:
 	docker-compose stop
 
 shell:
-	docker exec -it  zolletta-slack-url-keeper-php /bin/bash
+	docker exec -it zolletta-slack-url-keeper-php /bin/bash
 
 mysql:
-	docker exec -it  zolletta-slack-url-keeper-mysql mysql -uroot -p
+	docker exec -it zolletta-slack-url-keeper-mysql mysql -uroot -p
 
 recreate:
 	docker-compose up --force-recreate --no-start

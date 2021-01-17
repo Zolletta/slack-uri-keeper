@@ -43,9 +43,4 @@ grumphp:
             verbose: true
             diff: false
             triggered_by: ['php']
-    testsuites:
-        suitename:
-            tasks:
-                - phpstan
-                - phpcsfixer
     extensions: []

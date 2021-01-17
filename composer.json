@@ -21,7 +21,8 @@
         "doctrine/doctrine-cache-bundle": "*",
         "doctrine/orm": "*",
         "guzzlehttp/guzzle": "*",
-        "guzzlehttp/psr7": "*"
+        "guzzlehttp/psr7": "*",
+        "symfony/dotenv": "*"
     },
     "require-dev": {
         "kint-php/kint":  "*",

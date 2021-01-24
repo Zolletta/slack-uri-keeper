@@ -11,14 +11,6 @@ services:
       - 80
       - 443
 
-  php:
-    container_name: zolletta-slack-url-keeper-php
-    image: php:7.4-fpm
-    volumes:
-      - /var/www/
-    depends_on:
-      - mysql
-
   mysql:
     container_name: zolletta-slack-url-keeper-mysql
     image: mysql:latest
@@ -31,8 +23,14 @@ services:
   composer:
     container_name: composer
     image: composer:latest
-    command: ["composer", "install"]
     volumes:
       - /var/www/
     working_dir: /var/www
 
+  php:
+    container_name: zolletta-slack-url-keeper-php
+    image: php:7.4-fpm
+    volumes:
+      - /var/www/
+    depends_on:
+      - mysql

@@ -9,7 +9,7 @@ before_install:
   - docker-compose start
 
 before_script:
-  - ls
+  - docker-compose run composer update
 
 script:
   - docker exec -it zolletta-slack-url-keeper-php vendor/bin/phpunit

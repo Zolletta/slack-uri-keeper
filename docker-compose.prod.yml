@@ -1,4 +1,4 @@
-version: '3.3'
+version: '3.7'
 
 services:
 
@@ -31,6 +31,8 @@ services:
   composer:
     container_name: composer
     image: composer:latest
+    command: ["composer", "install"]
     volumes:
       - /var/www/
     working_dir: /var/www
+

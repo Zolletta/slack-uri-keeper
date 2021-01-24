@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - mv docker-compose.prod.ymll docker-compose.yml
+  - mv docker-compose.prod.yml docker-compose.yml
   - docker-compose up --force-recreate --no-start
 
 before_script:

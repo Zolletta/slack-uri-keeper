@@ -13,7 +13,7 @@
         }
     },
     "require": {
-        "php": "*",
+        "php": "7.4",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-pdo": "*",
@@ -32,7 +32,6 @@
         "phpstan/phpstan-phpunit":  "*",
         "phpstan/phpstan-symfony":  "*",
         "phpunit/phpunit":  "*",
-        "phpro/grumphp": "*",
         "friendsofphp/php-cs-fixer": "*",
         "thecodingmachine/phpstan-safe-rule":  "*"
     }

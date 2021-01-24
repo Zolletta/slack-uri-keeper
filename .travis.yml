@@ -1,4 +1,17 @@
-before_script: composer update
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker-compose up --force-recreate --no-start
+
+before_script:
+  - composer update
+
+script:
+  - docker exec -it zolletta-slack-url-keeper-php vendor/bin/phpunit 
+
 language: php
 php:
-  - 8.0
+  - 7.4

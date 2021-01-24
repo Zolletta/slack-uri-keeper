@@ -8,7 +8,7 @@ before_install:
   - docker-compose up --force-recreate --no-start
 
 before_script:
-  - docker-compose run composer install -d=/var/www
+  - docker-compose run composer install 
 
 script:
   - docker exec -it zolletta-slack-url-keeper-php vendor/bin/phpunit

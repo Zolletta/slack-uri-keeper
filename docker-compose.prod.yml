@@ -21,8 +21,6 @@ services:
     container_name: zolletta-slack-url-keeper-mysql
     image: mysql:latest
     restart: always
-    environment:
-      - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
 
   composer:
     container_name: composer

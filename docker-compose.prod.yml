@@ -25,6 +25,8 @@ services:
     volumes:
       - /var/lib/mysql
     restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=UmpilsssimoLaurentissimo42
 
   composer:
     container_name: composer

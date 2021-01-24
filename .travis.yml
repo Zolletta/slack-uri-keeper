@@ -5,7 +5,8 @@ services:
 
 before_install:
   - mv docker-compose.prod.yml docker-compose.yml
-  - docker-compose up --force-recreate 
+  - docker-compose up --force-recreate --no-start
+  - docker-compose start
 
 before_script:
   - docker-compose run composer install

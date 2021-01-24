@@ -5,10 +5,10 @@ services:
 
 before_install:
   - mv docker-compose.prod.yml docker-compose.yml
-  - docker-compose up --force-recreate --no-start
+  - docker-compose up --force-recreate 
 
 before_script:
-  - docker-compose run composer install 
+  - docker-compose run composer install
 
 script:
   - docker exec -it zolletta-slack-url-keeper-php vendor/bin/phpunit

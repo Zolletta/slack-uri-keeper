@@ -34,5 +34,8 @@
         "phpunit/phpunit":  "*",
         "friendsofphp/php-cs-fixer": "*",
         "thecodingmachine/phpstan-safe-rule":  "*"
+    },
+    "config": {
+        "disable-tls": false
     }
 }

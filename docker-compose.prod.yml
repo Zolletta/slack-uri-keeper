@@ -14,15 +14,21 @@ services:
   php:
     container_name: zolletta-slack-url-keeper-php
     image: php:7.4-fpm
+    volumes:
+      - /var/www/
     depends_on:
       - mysql
 
   mysql:
     container_name: zolletta-slack-url-keeper-mysql
     image: mysql:latest
+    volumes:
+      - /var/lib/mysql
     restart: always
 
   composer:
     container_name: composer
     image: composer:latest
+    volumes:
+      - /var/www/
     working_dir: /var/www

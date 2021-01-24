@@ -1,0 +1,32 @@
+version: '3.3'
+
+services:
+
+  nginx:
+    container_name: zolletta-slack-url-keeper-nginx
+    image: nginx:alpine
+    depends_on:
+      - php
+    expose:
+      - 80
+      - 443
+
+  php:
+    container_name: zolletta-slack-url-keeper-php
+    image: php:7.4-fpm
+    depends_on:
+      - mysql
+
+  mysql:
+    container_name: zolletta-slack-url-keeper-mysql
+    image: mysql:latest
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
+
+  composer:
+    container_name: composer
+    image: composer:latest
+    volumes_from:
+      - php
+    working_dir: /var/www

@@ -4,14 +4,16 @@ services:
   - docker
 
 before_install:
+  - mv docker-compose.prod.ymll docker-compose.yml
   - docker-compose up --force-recreate --no-start
 
 before_script:
-  - composer update
+  - docker-compose run composer install
 
 script:
-  - docker exec -it zolletta-slack-url-keeper-php vendor/bin/phpunit 
+  - docker exec -it zolletta-slack-url-keeper-php vendor/bin/phpunit
 
 language: php
+
 php:
   - 7.4

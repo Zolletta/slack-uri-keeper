@@ -27,6 +27,4 @@ services:
   composer:
     container_name: composer
     image: composer:latest
-    volumes_from:
-      - php
     working_dir: /var/www

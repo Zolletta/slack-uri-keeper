@@ -17,8 +17,6 @@
         "ext-curl": "*",
         "ext-json": "*",
         "ext-pdo": "*",
-        "doctrine/doctrine-bundle": "*",
-        "doctrine/doctrine-cache-bundle": "*",
         "doctrine/orm": "*",
         "guzzlehttp/guzzle": "*",
         "guzzlehttp/psr7": "*",

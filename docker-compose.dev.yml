@@ -18,7 +18,9 @@ services:
     container_name: zolletta-slack-url-keeper-php
     image: php:7.4-fpm
     volumes:
-      - zolletta-url-keeper-files
+      - type: volume
+        source: zolletta-url-keeper-files
+        target: /var/www
     depends_on:
       - mysql
 
@@ -26,7 +28,9 @@ services:
     container_name: zolletta-slack-url-keeper-mysql
     image: mysql:latest
     volumes:
-      - zolletta-url-keeper-db
+      - type: volume
+        source: zolletta-url-keeper-db
+        target: /var/www
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
@@ -37,13 +41,24 @@ services:
     container_name: composer
     image: composer:latest
     volumes:
-      - zolletta-url-keeper-files
+      - type: volume
+        source: zolletta-url-keeper-files
+        target: /var/www
 
 volumes:
   zolletta-url-keeper-db:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ./db/slack-url-keeper
+
   zolletta-url-keeper-files:
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: ./
 
 networks:
-  default:
-    external:
-      name: slack-url-keeper_default
+  slack-url-keeper_default:

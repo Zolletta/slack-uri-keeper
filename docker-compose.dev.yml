@@ -44,6 +44,7 @@ services:
       - type: volume
         source: zolletta-url-keeper-files
         target: /var/www
+    working_dir: /var/www
 
 volumes:
   zolletta-url-keeper-db:

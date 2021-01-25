@@ -30,7 +30,7 @@ services:
   php:
     container_name: zolletta-slack-url-keeper-php
     image: php:7.4-fpm
-    volumes:
-      - /var/www/
+    volumes_from:
+      - php
     depends_on:
       - mysql

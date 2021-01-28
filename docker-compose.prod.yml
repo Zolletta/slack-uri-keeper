@@ -17,38 +17,17 @@ services:
   php:
     container_name: zolletta-slack-url-keeper-php
     image: php:7.4-fpm
-    volumes:
-      - type: volume
-        source: zolletta-url-keeper-files
-        target: /var/www
     depends_on:
       - mysql
+    volumes:
+      ./:/var/www
 
   mysql:
     container_name: zolletta-slack-url-keeper-mysql
     image: mysql:latest
-    volumes:
-      - type: volume
-        source: zolletta-url-keeper-db
-        target: /var/www
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD}
     ports:
       - "127.0.0.1:3306:3306"
-
-  composer:
-    container_name: composer
-    image: composer:latest
-    volumes:
-      - type: volume
-        source: zolletta-url-keeper-files
-        target: /var/www
-    working_dir: /var/www
-    depends_on:
-      - php
-
-volumes:
-  zolletta-url-keeper-db:
-  zolletta-url-keeper-files:
 

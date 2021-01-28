@@ -3,10 +3,11 @@ services:
 - docker
 before_install:
 - mv docker-compose.prod.yml docker-compose.yml
+- composer update
 - docker-compose up --force-recreate --no-start
 - docker-compose start
 before_script:
-- composer update
+- composer install
 script:
 - docker exec -it zolletta-slack-url-keeper-php vendor/bin/phpunit
 language: php

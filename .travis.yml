@@ -8,10 +8,8 @@ before_install:
   - docker-compose up --force-recreate --no-start
   - docker-compose start
 
-before_script:
-  - docker-compose run composer install
-
 script:
+  - docker-compose run composer update
   - docker exec -it zolletta-slack-url-keeper-php vendor/bin/phpunit
 
 language: php

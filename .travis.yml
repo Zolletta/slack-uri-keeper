@@ -16,8 +16,7 @@ deploy:
   env: "ZollettaSlackUrlKeeper-env"
   bucket_name: "elasticbeanstalk-us-east-2-598934906686"
   on:
-    repo: Zolletta/slack-url-keeper
-    branches:
+    branch:
       only:
         - main
 before_deploy: "STARTING TO DEPLOY"

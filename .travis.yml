@@ -1,20 +1,17 @@
 sudo: required
-
 services:
-  - docker
-
+- docker
 before_install:
-  - mv docker-compose.prod.yml docker-compose.yml
-  - docker-compose up --force-recreate --no-start
-  - docker-compose start
-
+- mv docker-compose.prod.yml docker-compose.yml
+- docker-compose up --force-recreate --no-start
+- docker-compose start
 before_script:
-  - composer update
-
+- composer update
 script:
-  - docker exec -it zolletta-slack-url-keeper-php vendor/bin/phpunit
-
+- docker exec -it zolletta-slack-url-keeper-php vendor/bin/phpunit
 language: php
-
 php:
-  - 7.4
+- 7.4
+env:
+  global:
+    secure: ltGNxRX6AnQGNKTXNUCFi82ziuinkADyElu/UHeXps0jit6CaFbFzW/RdxRXeij1qo4XcxiqapV7xFQEeyJrKMxvNlWKhhwVXpMwz1YFERasYIfnkbhaggUvxx+ojbczxoWqbQ2SqsStWTxkDCGI43GMxze0tpvo29KGYE8hgObqPnzGxHy8h3xE1nyqLWtAaoQrNobre+Aho7OEzzbBPSp1GBKxptZDgdlZExxImGz5v03Nq40yXx8oph8VlvG4QbSUfrBJh1r98VEFVnHyJYilOPFsWAl+330ekfDfLJqp6tAclJLHtf+Lj6boPH7ZWh9JZmKJ+A1JHN5pzC3qQ0+yRwIa7muEPQ9iN6npvDPJvi7P2ZtqbeQSyj5sS9zjleQfQeSw3YRCJ6ZaoC84FoFrgACYw9JAbT8sgHhV3Fm0k/TS5uRREGqFwf9SdScsgaYmFoeSzg2Ogk/o7bbqKs1+SvQMbAcZV29Aq3GEUb/VWtZ62pFmwvHxUhEEXE9Cfcdbm3uygz0H2044hCahe8NShO+kf7nkj09/u8cYXE9z4vscuJu3KeZYpPnwmEjXkhJgqMlxmOfXNkM406pp9nZi+qwHJk84R3XexLBCa8pY6tVoPJW4MWG9nKfqK3fy7xUShiq06EzJjCFN8U2H4MTLcVpUJCo/5wo7glZ1sAk=

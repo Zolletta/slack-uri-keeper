@@ -45,13 +45,10 @@ services:
         source: zolletta-url-keeper-files
         target: /var/www
     working_dir: /var/www
+    depends_on:
+      - php
 
 volumes:
   zolletta-url-keeper-db:
-    driver: local
-
   zolletta-url-keeper-files:
-    driver: local
 
-networks:
-  slack-url-keeper_default:

@@ -20,7 +20,7 @@ services:
     depends_on:
       - mysql
     volumes:
-      ./:/var/www
+      - ./:/var/www
 
   mysql:
     container_name: zolletta-slack-url-keeper-mysql

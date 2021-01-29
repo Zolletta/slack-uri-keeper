@@ -5,6 +5,9 @@ script:
 language: php
 php:
 - 7.4
+
+before_deploy: echo "STARTING TO DEPLOY"
+
 deploy:
   provider: elasticbeanstalk
   access_key_id:
@@ -19,4 +22,11 @@ deploy:
     branch:
       only:
         - main
-before_deploy: "STARTING TO DEPLOY"
+
+after_deploy:  echo "AFTER DEPLOY"
+
+after_failure: echo "FALLIMENTI"
+
+after_success: echo "SUCCESSO"
+
+  

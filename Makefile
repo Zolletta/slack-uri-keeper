@@ -1,5 +1,5 @@
 check-network:
-	(docker network ls | awk '{ print $2 }' | grep -q prestiti_default) || docker network create --subnet "172.25.0.1/24" -d bridge zolletta_default
+	(docker network ls | awk '{ print $2 }' | grep -q zolletta_default) || docker network create --subnet "172.25.0.1/24" -d bridge zolletta_default
 
 start:
 	docker-compose start

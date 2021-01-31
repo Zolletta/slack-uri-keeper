@@ -17,11 +17,11 @@ deploy:
     branch:
       only:
         - main
-  edge: true # opt in to dplon:
+  edge: true  
   wait_until_deployed: true
   cleanup: true
 
-after_success: 
+after_success:
 after_failure:
 after_script:
 run_finish:

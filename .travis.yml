@@ -20,7 +20,6 @@ deploy:
   edge: true # opt in to dplon:
   wait_until_deployed: true
   cleanup: true
-  run: ["composer", "update"]
 
 after_deploy:  echo "DEPLOYMENT SUCCESSFUL"
 

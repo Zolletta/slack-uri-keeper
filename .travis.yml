@@ -22,10 +22,10 @@ deploy:
   cleanup: true
   run: ["composer", "update"]
 
-after_deploy:   "AFTER DEPLOY"
+after_deploy:  echo "DEPLOYMENT SUCCESSFUL"
 
-after_failure: "FALLIMENTI"
+after_failure: echo "FAILED"
 
-after_success: "SUCCESSO"
+after_success: echo "SUCCESS"
 
   

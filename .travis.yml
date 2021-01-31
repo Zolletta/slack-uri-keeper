@@ -14,6 +14,7 @@ deploy:
   secret_access_key: XieWwoy9Fre1S6zqUHvvgWbpeZ2pgH/mZmZHZXP4MIAEN2wlcWlE7Q/Oft2B++SxF80Qnsj5ctviXgYf067YmjoIOrBna4VousOE9imPxEfyc5RHD/iuzYdr8drLzDbsXl1CIXeQsjsKcDXpU7id6NggHHWOmLHsKfUSRm0V81Hn6WeQKrKMgqeSz/dEGrhKgDorYT2XLRmM06Hw8X9bfvPv0IsleuS+WEz1f7l76WM2lIFSaYXsQgvzP3+g/Soy+C9XYEhrUKUTPOSVUOpgnU7XVUhUZplQ51ygZx8pir3nK0vXLbihYEIMAbxsd6LnuW+d5bJGQ4xO/+7Q8tZR4DJSa/iOhnOxtLucFS2gVJLPj0Rp0EHCbySAXAWD0t5ZqWjulIR33bojZNWjQxbnaSkuQZDz22E53/kFwult8zetra5ZfggsB/bkSO4DqP2q9TnjpRnbpuRtxt7qcVLPRYgLCbtU6g9vyQbHCbGEO8AGdymzV/JYLqls61EK/hOS1nOGO/0dxp2Xq7HBsUBWISysvNKqIeMpxJf4gF6JTbjxW1QvxCVhvovrq7JwhjY9Ur0i+fVCKBtSBxXBQh9nGfjo7rTttprXSF2GccJXivHSc9oNtIvDhKLVssarL0QgDVpe6vkHOe+LdRPB3iUfY2lqgEEvXjIoOBwT5IdG96A=
   bucket: elasticbeanstalk-us-east-2-598934906686
   edge: true # opt in to dplon:
+  on:
     branch:
       only:
         - main
